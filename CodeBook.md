@@ -256,9 +256,8 @@ names(selectedData) <- gsub("BodyBody", "Body", names(selectedData))
 
 Unable work out how to do this.
 
-Output tidy dataset as tidy_data.csv to data directory.
+Output tidy dataset as a .txt file created with write.table() using row.name=FALSE
 
 ```
-write.csv(tidyData, file = "tidy_data.csv")
+write.table(tidyData, "tidy_data.txt", row.names = FALSE, quote = FALSE)
 ```
-
