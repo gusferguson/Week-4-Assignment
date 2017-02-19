@@ -39,7 +39,7 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.
 
-Check the README.txt file included with the data for further details about this dataset.
+Check the README.txt file included with the data for further details about this dataset. 
 
 ###Attribute Information:
 
@@ -79,11 +79,12 @@ Run on R Studio Version 1.0.136.
 
 ##Prerequisites
 
-The dply library is required.
+The dply and doBy libraries are required.
+
 
 ```
 install.packages("dplyr")
-library(dplyr)
+install.packages("doBy")
 ```
 
 ##Solution
@@ -91,6 +92,13 @@ library(dplyr)
 R script called run_analysis.R that does the following.
 
 ###Preparatory Code
+
+Load required libraries
+
+```
+library(dplyr)
+library(doBy)
+```
 
 Check that the data directory exists - if not create it.
 
@@ -210,16 +218,14 @@ columnNames <- colnames(combinedDataset)
 ```
 
 Identify columns to retain - activityID, subjectID and any with mean or std in them. Uses retainColumns to select columns required.
+
 ```
 retainColumns <- (grepl("activityId" , colNames) | 
                     grepl("subjectId" , colNames) | 
                     grepl("mean.." , colNames) | 
                     grepl("std.." , colNames)
                   )
-```
 
-
-```
 selectedData <- combinedDataset[ , retainColumns == TRUE]
 ```
 
@@ -254,10 +260,47 @@ names(selectedData) <- gsub("BodyBody", "Body", names(selectedData))
 
 ### 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-Unable work out how to do this.
+Use summaryBy from doBy library to produce tidy data table
+
+```
+tidyData <- summaryBy(selectedData[,3] + selectedData[,4] + selectedData[,5] +
+            selectedData[,6] + selectedData[,7] + selectedData[,8] +
+            selectedData[,9] + selectedData[,10] + selectedData[,11] +
+            selectedData[,12] + selectedData[,13] + selectedData[,14] +
+            selectedData[,15] + selectedData[,16] + selectedData[,17] +
+            selectedData[,18] + selectedData[,19] + selectedData[,20] +
+            selectedData[,21] + selectedData[,22] + selectedData[,23] +
+            selectedData[,24] + selectedData[,25] + selectedData[,26] +
+            selectedData[,27] + selectedData[,28] + selectedData[,29] +
+            selectedData[,30] + selectedData[,31] + selectedData[,32] +
+            selectedData[,33] + selectedData[,34] + selectedData[,35] +
+            selectedData[,36] + selectedData[,37] + selectedData[,38] +
+            selectedData[,39] + selectedData[,40] + selectedData[,41] +
+            selectedData[,42] + selectedData[,43] + selectedData[,44] +
+            selectedData[,45] + selectedData[,46] + selectedData[,47] +
+            selectedData[,48] + selectedData[,49] + selectedData[,50] +
+            selectedData[,51] + selectedData[,52] + selectedData[,53] +
+            selectedData[,54] + selectedData[,55] + selectedData[,56] +
+            selectedData[,57] + selectedData[,58] + selectedData[,59] +
+            selectedData[,60] + selectedData[,61] + selectedData[,62] +
+            selectedData[,63] + selectedData[,64] + selectedData[,65] +
+            selectedData[,66] + selectedData[,67] + selectedData[,68] +
+            selectedData[,69] + selectedData[,70] + selectedData[,71] +
+            selectedData[,72] + selectedData[,73] + selectedData[,74] +
+            selectedData[,75] + selectedData[,76] + selectedData[,77] +
+            selectedData[,78] + selectedData[,79] + selectedData[,80] +
+            selectedData[,81] ~ subjectId + activityId, data = selectedData, FUN = mean)
+```
+
+Restore column names to readable versions
+
+```
+names(tidyData) <- colnames(selectedData)
+```
 
 Output tidy dataset as a .txt file created with write.table() using row.name=FALSE
 
 ```
 write.table(tidyData, "tidy_data.txt", row.names = FALSE, quote = FALSE)
 ```
+
