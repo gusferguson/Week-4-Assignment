@@ -9,6 +9,10 @@
 #    average of each variable for each activity and each subject.
 ############################
 
+#load required libraries
+library(dplyr)
+library(doBy)
+
 #check data directory exists/create it
 if(!file.exists("./data")){dir.create("./data")}
 
@@ -89,8 +93,37 @@ names(selectedData) <- gsub("BodyBody", "Body", names(selectedData))
 #create a second, independent tidy data set with the average
 #of each variable for each activity and each subject.
 
-#unable work out how to do this
-tidyData <- selectedData
+#use summaryBy to produce tidy data table
+tidyData <- summaryBy(selectedData[,3] + selectedData[,4] + selectedData[,5] +
+            selectedData[,6] + selectedData[,7] + selectedData[,8] +
+            selectedData[,9] + selectedData[,10] + selectedData[,11] +
+            selectedData[,12] + selectedData[,13] + selectedData[,14] +
+            selectedData[,15] + selectedData[,16] + selectedData[,17] +
+            selectedData[,18] + selectedData[,19] + selectedData[,20] +
+            selectedData[,21] + selectedData[,22] + selectedData[,23] +
+            selectedData[,24] + selectedData[,25] + selectedData[,26] +
+            selectedData[,27] + selectedData[,28] + selectedData[,29] +
+            selectedData[,30] + selectedData[,31] + selectedData[,32] +
+            selectedData[,33] + selectedData[,34] + selectedData[,35] +
+            selectedData[,36] + selectedData[,37] + selectedData[,38] +
+            selectedData[,39] + selectedData[,40] + selectedData[,41] +
+            selectedData[,42] + selectedData[,43] + selectedData[,44] +
+            selectedData[,45] + selectedData[,46] + selectedData[,47] +
+            selectedData[,48] + selectedData[,49] + selectedData[,50] +
+            selectedData[,51] + selectedData[,52] + selectedData[,53] +
+            selectedData[,54] + selectedData[,55] + selectedData[,56] +
+            selectedData[,57] + selectedData[,58] + selectedData[,59] +
+            selectedData[,60] + selectedData[,61] + selectedData[,62] +
+            selectedData[,63] + selectedData[,64] + selectedData[,65] +
+            selectedData[,66] + selectedData[,67] + selectedData[,68] +
+            selectedData[,69] + selectedData[,70] + selectedData[,71] +
+            selectedData[,72] + selectedData[,73] + selectedData[,74] +
+            selectedData[,75] + selectedData[,76] + selectedData[,77] +
+            selectedData[,78] + selectedData[,79] + selectedData[,80] +
+            selectedData[,81] ~ subjectId + activityId, data = selectedData, FUN = mean)
+
+#restore column names
+names(tidyData) <- colnames(selectedData)
 
 #output tidy dataset
-write.csv(tidyData, file = "tidy_data.csv")
+write.table(tidyData, "tidy_data.txt", row.names = FALSE, quote = FALSE)
