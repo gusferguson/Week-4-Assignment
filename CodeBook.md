@@ -309,7 +309,9 @@ write.table(tidyData, "tidy_data.txt", row.names = FALSE, quote = FALSE)
 ###Names and Types of variable:
 
 subjectId
+
 "integer"
+
 activityId
 "factor"
 timeBodyAccelerometer-meanstdDevDev-X
