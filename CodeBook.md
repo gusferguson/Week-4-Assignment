@@ -317,7 +317,7 @@ timeBodyAccelerometer-meanstdDevDev-X	  :  	"numeric"
 timeBodyAccelerometer-meanstdDevDev-Y	  :  	"numeric"
 
 timeBodyAccelerometer-meanstdDevDev-Z	  :  	"numeric"
-]
+
 timeBodyAccelerometer-stdDevstdDevDev-X	  :  	"numeric"
 
 timeBodyAccelerometer-stdDevstdDevDev-Y	  :  	"numeric"
