@@ -308,223 +308,87 @@ write.table(tidyData, "tidy_data.txt", row.names = FALSE, quote = FALSE)
 
 ###Names and Types of variable:
 
-subjectId
-"integer"
-activityId
-"factor"
-timeBodyAccelerometer-meanstdDevDev-X
-"numeric"
-timeBodyAccelerometer-meanstdDevDev-Y
-"numeric"
-timeBodyAccelerometer-meanstdDevDev-Z
-"numeric"
-timeBodyAccelerometer-stdDevstdDevDev-X
-"numeric"
-timeBodyAccelerometer-stdDevstdDevDev-Y
-"numeric"
-timeBodyAccelerometer-stdDevstdDevDev-Z
-"numeric"
-timeGravityAccelerometer-meanstdDevDev-X
-"numeric"
-timeGravityAccelerometer-meanstdDevDev-Y
-"numeric"
-timeGravityAccelerometer-meanstdDevDev-Z
-"numeric"
-timeGravityAccelerometer-stdDevstdDevDev-X
-"numeric"
-timeGravityAccelerometer-stdDevstdDevDev-Y
-"numeric"
-timeGravityAccelerometer-stdDevstdDevDev-Z
-"numeric"
-timeBodyAccelerometerJerk-meanstdDevDev-X
-"numeric"
-timeBodyAccelerometerJerk-meanstdDevDev-Y
-"numeric"
-timeBodyAccelerometerJerk-meanstdDevDev-Z
-"numeric"
-timeBodyAccelerometerJerk-stdDevstdDevDev-X
-"numeric"
-timeBodyAccelerometerJerk-stdDevstdDevDev-Y
-"numeric"
-timeBodyAccelerometerJerk-stdDevstdDevDev-Z
-"numeric"
-timeBodyGyroscope-meanstdDevDev-X
-"numeric"
-timeBodyGyroscope-meanstdDevDev-Y
-"numeric"
-timeBodyGyroscope-meanstdDevDev-Z
-"numeric"
-timeBodyGyroscope-stdDevstdDevDev-X
-"numeric"
-timeBodyGyroscope-stdDevstdDevDev-Y
-"numeric"
-timeBodyGyroscope-stdDevstdDevDev-Z
-"numeric"
-timeBodyGyroscopeJerk-meanstdDevDev-X
-"numeric"
-timeBodyGyroscopeJerk-meanstdDevDev-Y
-"numeric"
-timeBodyGyroscopeJerk-meanstdDevDev-Z
-"numeric"
-timeBodyGyroscopeJerk-stdDevstdDevDev-X
-"numeric"
-timeBodyGyroscopeJerk-stdDevstdDevDev-Y
-"numeric"
-timeBodyGyroscopeJerk-stdDevstdDevDev-Z
-"numeric"
-timeBodyAccelerometerMagnitude-meanstdDevDev
-"numeric"
-timeBodyAccelerometerMagnitude-stdDevstdDevDev
-"numeric"
-timeGravityAccelerometerMagnitude-meanstdDevDev
-"numeric"
-timeGravityAccelerometerMagnitude-stdDevstdDevDev
-"numeric"
-timeBodyAccelerometerJerkMagnitude-meanstdDevDev
-"numeric"
-timeBodyAccelerometerJerkMagnitude-stdDevstdDevDev
-"numeric"
-timeBodyGyroscopeMagnitude-meanstdDevDev
-"numeric"
-timeBodyGyroscopeMagnitude-stdDevstdDevDev
-"numeric"
-timeBodyGyroscopeJerkMagnitude-meanstdDevDev
-"numeric"
-timeBodyGyroscopeJerkMagnitude-stdDevstdDevDev
-"numeric"
-frequencyBodyAccelerometer-meanstdDevDev-X
-"numeric"
-frequencyBodyAccelerometer-meanstdDevDev-Y
-"numeric"
-frequencyBodyAccelerometer-meanstdDevDev-Z
-"numeric"
-frequencyBodyAccelerometer-stdDevstdDevDev-X
-"numeric"
-frequencyBodyAccelerometer-stdDevstdDevDev-Y
-"numeric"
-frequencyBodyAccelerometer-stdDevstdDevDev-Z
-"numeric"
-frequencyBodyAccelerometer-meanFreqstdDevDev-X
-"numeric"
-frequencyBodyAccelerometer-meanFreqstdDevDev-Y
-"numeric"
-frequencyBodyAccelerometer-meanFreqstdDevDev-Z
-"numeric"
-frequencyBodyAccelerometerJerk-meanstdDevDev-X
-"numeric"
-frequencyBodyAccelerometerJerk-meanstdDevDev-Y
-"numeric"
-frequencyBodyAccelerometerJerk-meanstdDevDev-Z
-"numeric"
-frequencyBodyAccelerometerJerk-stdDevstdDevDev-X
-"numeric"
-frequencyBodyAccelerometerJerk-stdDevstdDevDev-Y
-"numeric"
-frequencyBodyAccelerometerJerk-stdDevstdDevDev-Z
-"numeric"
-frequencyBodyAccelerometerJerk-meanFreqstdDevDev-X
-"numeric"
-frequencyBodyAccelerometerJerk-meanFreqstdDevDev-Y
-"numeric"
-frequencyBodyAccelerometerJerk-meanFreqstdDevDev-Z
-"numeric"
-frequencyBodyGyroscope-meanstdDevDev-X
-"numeric"
-frequencyBodyGyroscope-meanstdDevDev-Y
-"numeric"
-frequencyBodyGyroscope-meanstdDevDev-Z
-"numeric"
-frequencyBodyGyroscope-stdDevstdDevDev-X
-"numeric"
-frequencyBodyGyroscope-stdDevstdDevDev-Y
-"numeric"
-frequencyBodyGyroscope-stdDevstdDevDev-Z
-"numeric"
-frequencyBodyGyroscope-meanFreqstdDevDev-X
-"numeric"
-frequencyBodyGyroscope-meanFreqstdDevDev-Y
-"numeric"
-frequencyBodyGyroscope-meanFreqstdDevDev-Z
-"numeric"
-frequencyBodyAccelerometerMagnitude-meanstdDevDev
-"numeric"
-frequencyBodyAccelerometerMagnitude-stdDevstdDevDev
-"numeric"
-frequencyBodyAccelerometerMagnitude-meanFreqstdDevDev
-"numeric"
-frequencyBodyAccelerometerJerkMagnitude-meanstdDevDev
-"numeric"
-frequencyBodyAccelerometerJerkMagnitude-stdDevstdDevDev
-"numeric"
-frequencyBodyAccelerometerJerkMagnitude-meanFreqstdDevDev
-"numeric"
-frequencyBodyGyroscopeMagnitude-meanstdDevDev
-"numeric"
-frequencyBodyGyroscopeMagnitude-stdDevstdDevDev
-"numeric"
-frequencyBodyGyroscopeMagnitude-meanFreqstdDevDev
-"numeric"
-frequencyBodyGyroscopeJerkMagnitude-meanstdDevDev
-"numeric"
-frequencyBodyGyroscopeJerkMagnitude-stdDevstdDevDev
-"numeric"
-frequencyBodyGyroscopeJerkMagnitude-meanFreqstdDevDev
-"numeric"
+subjectId	  :  	"integer"
+activityId	  :  	"factor"
+timeBodyAccelerometer-meanstdDevDev-X	  :  	"numeric"
+timeBodyAccelerometer-meanstdDevDev-Y	  :  	"numeric"
+timeBodyAccelerometer-meanstdDevDev-Z	  :  	"numeric"
+timeBodyAccelerometer-stdDevstdDevDev-X	  :  	"numeric"
+timeBodyAccelerometer-stdDevstdDevDev-Y	  :  	"numeric"
+timeBodyAccelerometer-stdDevstdDevDev-Z	  :  	"numeric"
+timeGravityAccelerometer-meanstdDevDev-X	  :  	"numeric"
+timeGravityAccelerometer-meanstdDevDev-Y	  :  	"numeric"
+timeGravityAccelerometer-meanstdDevDev-Z	  :  	"numeric"
+timeGravityAccelerometer-stdDevstdDevDev-X	  :  	"numeric"
+timeGravityAccelerometer-stdDevstdDevDev-Y	  :  	"numeric"
+timeGravityAccelerometer-stdDevstdDevDev-Z	  :  	"numeric"
+timeBodyAccelerometerJerk-meanstdDevDev-X	  :  	"numeric"
+timeBodyAccelerometerJerk-meanstdDevDev-Y	  :  	"numeric"
+timeBodyAccelerometerJerk-meanstdDevDev-Z	  :  	"numeric"
+timeBodyAccelerometerJerk-stdDevstdDevDev-X	  :  	"numeric"
+timeBodyAccelerometerJerk-stdDevstdDevDev-Y	  :  	"numeric"
+timeBodyAccelerometerJerk-stdDevstdDevDev-Z	  :  	"numeric"
+timeBodyGyroscope-meanstdDevDev-X	  :  	"numeric"
+timeBodyGyroscope-meanstdDevDev-Y	  :  	"numeric"
+timeBodyGyroscope-meanstdDevDev-Z	  :  	"numeric"
+timeBodyGyroscope-stdDevstdDevDev-X	  :  	"numeric"
+timeBodyGyroscope-stdDevstdDevDev-Y	  :  	"numeric"
+timeBodyGyroscope-stdDevstdDevDev-Z	  :  	"numeric"
+timeBodyGyroscopeJerk-meanstdDevDev-X	  :  	"numeric"
+timeBodyGyroscopeJerk-meanstdDevDev-Y	  :  	"numeric"
+timeBodyGyroscopeJerk-meanstdDevDev-Z	  :  	"numeric"
+timeBodyGyroscopeJerk-stdDevstdDevDev-X	  :  	"numeric"
+timeBodyGyroscopeJerk-stdDevstdDevDev-Y	  :  	"numeric"
+timeBodyGyroscopeJerk-stdDevstdDevDev-Z	  :  	"numeric"
+timeBodyAccelerometerMagnitude-meanstdDevDev	  :  	"numeric"
+timeBodyAccelerometerMagnitude-stdDevstdDevDev	  :  	"numeric"
+timeGravityAccelerometerMagnitude-meanstdDevDev	  :  	"numeric"
+timeGravityAccelerometerMagnitude-stdDevstdDevDev	  :  	"numeric"
+timeBodyAccelerometerJerkMagnitude-meanstdDevDev	  :  	"numeric"
+timeBodyAccelerometerJerkMagnitude-stdDevstdDevDev	  :  	"numeric"
+timeBodyGyroscopeMagnitude-meanstdDevDev	  :  	"numeric"
+timeBodyGyroscopeMagnitude-stdDevstdDevDev	  :  	"numeric"
+timeBodyGyroscopeJerkMagnitude-meanstdDevDev	  :  	"numeric"
+timeBodyGyroscopeJerkMagnitude-stdDevstdDevDev	  :  	"numeric"
+frequencyBodyAccelerometer-meanstdDevDev-X	  :  	"numeric"
+frequencyBodyAccelerometer-meanstdDevDev-Y	  :  	"numeric"
+frequencyBodyAccelerometer-meanstdDevDev-Z	  :  	"numeric"
+frequencyBodyAccelerometer-stdDevstdDevDev-X	  :  	"numeric"
+frequencyBodyAccelerometer-stdDevstdDevDev-Y	  :  	"numeric"
+frequencyBodyAccelerometer-stdDevstdDevDev-Z	  :  	"numeric"
+frequencyBodyAccelerometer-meanFreqstdDevDev-X	  :  	"numeric"
+frequencyBodyAccelerometer-meanFreqstdDevDev-Y	  :  	"numeric"
+frequencyBodyAccelerometer-meanFreqstdDevDev-Z	  :  	"numeric"
+frequencyBodyAccelerometerJerk-meanstdDevDev-X	  :  	"numeric"
+frequencyBodyAccelerometerJerk-meanstdDevDev-Y	  :  	"numeric"
+frequencyBodyAccelerometerJerk-meanstdDevDev-Z	  :  	"numeric"
+frequencyBodyAccelerometerJerk-stdDevstdDevDev-X	  :  	"numeric"
+frequencyBodyAccelerometerJerk-stdDevstdDevDev-Y	  :  	"numeric"
+frequencyBodyAccelerometerJerk-stdDevstdDevDev-Z	  :  	"numeric"
+frequencyBodyAccelerometerJerk-meanFreqstdDevDev-X	  :  	"numeric"
+frequencyBodyAccelerometerJerk-meanFreqstdDevDev-Y	  :  	"numeric"
+frequencyBodyAccelerometerJerk-meanFreqstdDevDev-Z	  :  	"numeric"
+frequencyBodyGyroscope-meanstdDevDev-X	  :  	"numeric"
+frequencyBodyGyroscope-meanstdDevDev-Y	  :  	"numeric"
+frequencyBodyGyroscope-meanstdDevDev-Z	  :  	"numeric"
+frequencyBodyGyroscope-stdDevstdDevDev-X	  :  	"numeric"
+frequencyBodyGyroscope-stdDevstdDevDev-Y	  :  	"numeric"
+frequencyBodyGyroscope-stdDevstdDevDev-Z	  :  	"numeric"
+frequencyBodyGyroscope-meanFreqstdDevDev-X	  :  	"numeric"
+frequencyBodyGyroscope-meanFreqstdDevDev-Y	  :  	"numeric"
+frequencyBodyGyroscope-meanFreqstdDevDev-Z	  :  	"numeric"
+frequencyBodyAccelerometerMagnitude-meanstdDevDev	  :  	"numeric"
+frequencyBodyAccelerometerMagnitude-stdDevstdDevDev	  :  	"numeric"
+frequencyBodyAccelerometerMagnitude-meanFreqstdDevDev	  :  	"numeric"
+frequencyBodyAccelerometerJerkMagnitude-meanstdDevDev	  :  	"numeric"
+frequencyBodyAccelerometerJerkMagnitude-stdDevstdDevDev	  :  	"numeric"
+frequencyBodyAccelerometerJerkMagnitude-meanFreqstdDevDev	  :  	"numeric"
+frequencyBodyGyroscopeMagnitude-meanstdDevDev	  :  	"numeric"
+frequencyBodyGyroscopeMagnitude-stdDevstdDevDev	  :  	"numeric"
+frequencyBodyGyroscopeMagnitude-meanFreqstdDevDev	  :  	"numeric"
+frequencyBodyGyroscopeJerkMagnitude-meanstdDevDev	  :  	"numeric"
+frequencyBodyGyroscopeJerkMagnitude-stdDevstdDevDev	  :  	"numeric"
+frequencyBodyGyroscopeJerkMagnitude-meanFreqstdDevDev	  :  	"numeric"
 
-"numeric"
-timeBodyAccelerometerJerk-meanstdDevDev-Y
-"numeric"
-timeBodyAccelerometerJerk-meanstdDevDev-Z
-"numeric"
-timeBodyAccelerometerJerk-stdDevstdDevDev-X
-"numeric"
-timeBodyAccelerometerJerk-stdDevstdDevDev-Y
-"numeric"
-timeBodyAccelerometerJerk-stdDevstdDevDev-Z
-"numeric"
-timeBodyGyroscope-meanstdDevDev-X
-"numeric"
-timeBodyGyroscope-meanstdDevDev-Y
-"numeric"
-timeBodyGyroscope-meanstdDevDev-Z
-"numeric"
-timeBodyGyroscope-stdDevstdDevDev-X
-"numeric"
-timeBodyGyroscope-stdDevstdDevDev-Y
-"numeric"
-timeBodyGyroscope-stdDevstdDevDev-Z
-"numeric"
-timeBodyGyroscopeJerk-meanstdDevDev-X
-"numeric"
-timeBodyGyroscopeJerk-meanstdDevDev-Y
-"numeric"
-timeBodyGyroscopeJerk-meanstdDevDev-Z
-"numeric"
-timeBodyGyroscopeJerk-stdDevstdDevDev-X
-"numeric"
-timeBodyGyroscopeJerk-stdDevstdDevDev-Y
-"numeric"
-timeBodyGyroscopeJerk-stdDevstdDevDev-Z
-"numeric"
-timeBodyAccelerometerMagnitude-meanstdDevDev
-"numeric"
-timeBodyAccelerometerMagnitude-stdDevstdDevDev
-"numeric"
-timeGravityAccelerometerMagnitude-meanstdDevDev
-"numeric"
-timeGravityAccelerometerMagnitude-stdDevstdDevDev
-"numeric"
-timeBodyAccelerometerJerkMagnitude-meanstdDevDev
-"numeric"
-timeBodyAccelerometerJerkMagnitude-stdDevstdDevDev
-"numeric"
-timeBodyGyroscopeMagnitude-meanstdDevDev
-"numeric"
-timeBodyGyroscopeMagnitude-stdDevstdDevDev
-"numeric"
-timeBodyGyroscopeJerkMagnitude-meanstdDevDev
-"numeric"
-timeBodyGyroscopeJerkMagnitude-stdDevstdDevDev
-"numeric"
-frequencyBodyAccelerometer-meanstdDevDev-X
+
 
